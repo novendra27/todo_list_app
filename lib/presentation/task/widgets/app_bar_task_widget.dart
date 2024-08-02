@@ -1,40 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
-import 'package:todo_list_app/common/widgets/app_bar.dart';
 import 'package:todo_list_app/core/configs/assets/app_images.dart';
 import 'package:todo_list_app/core/configs/assets/app_svg.dart';
 import 'package:todo_list_app/core/configs/theme/app_colors.dart';
-import 'package:todo_list_app/presentation/task/widgets/task_list_widget.dart';
 
-class TaskPage extends StatelessWidget {
-  const TaskPage({super.key});
+class AppBarTaskWidget extends StatelessWidget {
+  const AppBarTaskWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarWidget(
-        content: _appBarContent(context),
-        height: 117,
-      ),
-      body: const SingleChildScrollView(
-        child: Column(
-          children: [
-            TaskListWidget(),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Column _appBarContent(BuildContext context) {
     return Column(
       children: [
         const Gap(60),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SvgPicture.asset(AppSvg.sidebar),
+            SvgPicture.asset(
+              AppSvg.sidebar,
+              width: 24,
+              height: 24,
+            ),
             Row(
               children: [
                 Container(
@@ -58,7 +44,11 @@ class TaskPage extends StatelessWidget {
                 ),
               ],
             ),
-            SvgPicture.asset(AppSvg.search),
+            SvgPicture.asset(
+              AppSvg.search,
+              width: 24,
+              height: 24,
+            ),
           ],
         ),
       ],

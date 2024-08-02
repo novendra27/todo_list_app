@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:todo_list_app/core/configs/theme/app_colors.dart';
-import 'package:todo_list_app/presentation/pages/task_page.dart';
+import 'package:todo_list_app/presentation/task/pages/task_page.dart';
 
 void main() {
   runApp(const MyApp());
